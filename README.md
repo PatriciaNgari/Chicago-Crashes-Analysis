@@ -1,0 +1,52 @@
+# Predicting the Primary Contributory Cause of Car Accidents
+
+<img src="./Chicago_image.jpg" style="width:100%; height:auto;">
+
+This project aims to develop a predictive model to identify the primary contributory causes of car accidents in the City of Chicago. The project utilizes advanced machine learning techniques, including classification algorithms and feature engineering, to create a robust model that can provide insights into accident causation.
+
+## Objectives
+
+* Systematically explore and clean the Chicago crash datasets to address missing values, outliers, and inconsistencies, ensuring the data is accurate and reliable for modeling. This process will establish a strong foundation for feature selection and model development.
+
+* Identify and engineer the most relevant features that significantly influence crash causes, and reduce dimensionality where necessary to enhance model performance and interpretability. This step ensures the model focuses on the most critical factors, improving predictive accuracy.
+
+* Develop and train a robust multi-class classification model to accurately predict the primary contributory cause of car accidents, experimenting with various algorithms like Random Forest and Logistic Regression to identify the best-performing approach.
+
+* Rigorously evaluate the model’s performance using key metrics such as F1-score, precision, and recall, and optimize it through hyperparameter tuning and cross-validation to ensure it generalizes effectively to new, unseen data.
+
+* Analyze the model’s output to uncover patterns or common factors linked to specific crash causes, providing actionable insights that can guide policy decisions, enhance road safety measures, and shape public awareness campaigns.
+
+* Plan for the model’s integration into a decision-support system, making it accessible to city planners, law enforcement, and public safety officials to aid in strategic planning and proactive accident prevention efforts.
+
+## Data Choice and Understanding
+
+* Due to the large size of the available Crash Data files and limited resources, such as time for running and tuning models, we have decided to use only two datasets from the collection for our modeling efforts. This approach allows us to focus on achieving accurate results within our resource constraints while still leveraging a representative portion of the data. It also allows us to focus on the most relevant data while managing computational efficiency. The column `INJURY_CLASSIFICATION` from the `People` dataset will serve as our `Target variable` in the modelling process.
+
+1. `Traffic_Crashes_-_People_20240824.csv` from  [ Driver/Passenger Data](https://data.cityofchicago.org/Transportation/Traffic-Crashes-People/u6pd-qa9d/about_data): This data contains information about `people` involved in a crash and if `any injuries` were sustained.
+
+2. `Traffic_Crashes_-_Vehicles_20240824.csv` from [ Vehicle Data](https://data.cityofchicago.org/Transportation/Traffic-Crashes-Vehicles/68nd-jvt3/about_data): This dataset contains information about `vehicles` (or units as they are identified in crash reports) involved in a traffic crash. 
+
+## EDA
+
+#### The gender distribution
+
+* Let's check the distribution of gender in the involvement of crashes or accidents.
+
+![Distribution of Gender](Distribution_of_Gender)
+
+* The datasets had a larger sample of males involved in accidents compared to other gender with a leading percentage of `52.4%` which is more than half of the dataset.
+* The females had a `38.2%` while X a non-binary or gender non-conforming identity had `9.4%`
+
+
+
+![Count of Injury Classifications by Sex](Count_of_Injury_Classifications_by_Sex.PNG)
+
+![Count of Males and Females in Each Age Group](Count_of_Males_and_Females_in_Each_Age_Group)
+
+![Percentage of Accidents Per Year](Percentage_of_Accidents_Per_Year)
+
+![Crashes Counts per Each Month](Crashes_Counts_per_Each_Month)
+
+![Percentage of Injury Classifications](Percentage_of_Injury_Classifications)
+
+![Percentage of Physical Condition Classifications](Percentage_of_Physical_Condition_Classifications)
