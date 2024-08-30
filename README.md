@@ -32,16 +32,16 @@ This project aims to develop a predictive model to identify the primary contribu
 
 * Let's check the distribution of gender in the involvement of crashes or accidents.
 
-![Distribution of Gender](Distribution_of_Gender)
+<img src="Images/Distribution_of_Gen.PNG"><br>
 
 * The datasets had a larger sample of males involved in accidents compared to other gender with a leading percentage of `52.4%` which is more than half of the dataset.
 * The females had a `38.2%` while X a non-binary or gender non-conforming identity had `9.4%`
 
 
 
-![Count of Injury Classifications by Sex](Count_of_Injury_Classifications_by_Sex.PNG)
+<img src="Count_of_Injury_Classifications_by_Sex.PNG"><br>
 
-![Count of Males and Females in Each Age Group](Count_of_Males_and_Females_in_Each_Age_Group)
+<img src="Count_of_Males_and_Females_in_Each_Age_Group"><br>
 
 ![Percentage of Accidents Per Year](Percentage_of_Accidents_Per_Year)
 
