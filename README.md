@@ -39,14 +39,14 @@ This project aims to develop a predictive model to identify the primary contribu
 
 
 
-<img src="Count_of_Injury_Classifications_by_Sex.PNG"><br>
+![Count of Injury Classifications by Sex](Count_of_Injury_Classifications_by_Sex)
 
-<img src="Count_of_Males_and_Females_in_Each_Age_Group"><br>
+<img src="Images/Count_of_Males_and_Females_in_Each_Age_Group"><br>
 
-![Percentage of Accidents Per Year](Percentage_of_Accidents_Per_Year)
+![Percentage of Accidents Per Year](Images/Percentage_of_Accidents_Per_Year)
 
-![Crashes Counts per Each Month](Crashes_Counts_per_Each_Month)
+![Crashes Counts per Each Month](Images/Crashes_Counts_per_Each_Month)
 
-![Percentage of Injury Classifications](Percentage_of_Injury_Classifications)
+![Percentage of Injury Classifications](Images/Percentage_of_Injury_Classifications)
 
-![Percentage of Physical Condition Classifications](Percentage_of_Physical_Condition_Classifications)
+![Percentage of Physical Condition Classifications](Images/Percentage_of_Physical_Condition_Classifications)
