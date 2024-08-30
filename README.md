@@ -124,9 +124,16 @@ NONINCAPACITATING_INJURY       0.56      0.03      0.05     14064
                           precision    recall  f1-score   support
 
                    FATAL       0.01      0.33      0.01       125
+
+
    INCAPACITATING_INJURY       0.04      0.09      0.05      2281
+
+
 NONINCAPACITATING_INJURY       0.24      0.12      0.16     14064
+
  NO_INDICATION_OF_INJURY       0.98      0.31      0.47    322297
+
+
     REPORTED_NOT_EVIDENT       0.03      0.75      0.06      9158
 
                 accuracy                           0.31    347925
