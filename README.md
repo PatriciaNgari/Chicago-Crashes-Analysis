@@ -32,14 +32,14 @@ This project aims to develop a predictive model to identify the primary contribu
 
 * Let's check the distribution of gender in the involvement of crashes or accidents.
 
-<img src="Images/Distribution of Gender.png">
+<img src="Images/Distribution_of_Gender.png">
 
 * The datasets had a larger sample of males involved in accidents compared to other gender with a leading percentage of `52.4%` which is more than half of the dataset.
 * The females had a `38.2%` while X a non-binary or gender non-conforming identity had `9.4%`
 
 #### Classification of Injuries by Gender
 
-![Count of Injury Classifications by Sex](Images/Count of Injury Classifications by Sex.png)
+![Count of Injury Classifications by Sex](Images/Count_of_Injury_Classifications_by_Sex.png)
 
 * This graph shows the imbalance in the classifications with the class `NO_INDICATION_OF_INJURY` getting a large sample and `FATAL` getting the smallest sample.
 * From the graph `MALES` have high occurrences in all the five classes followed by `FEMALES`.
@@ -63,6 +63,19 @@ This project aims to develop a predictive model to identify the primary contribu
 
 ![Percentage of Physical Condition Classifications](Images/Percentage_of_Physical_Condition_Classifications.png)
 
-## Models
+## Preprocessing
 
-* We started with a dummy
+#### Treating Missing Values
+
+* There were few missing values from the `target` variable and dropping the rows would not have a big impact on our dataset since there are 1391998 rows in our dataset. This was the best approach for the `target` variable in order to avoid `leakage` if we imputed the missing values.
+* The dropped rows from our target variable were dropped from our features to maintain alignment between the features and the target variable to avoid incorrect predictions.
+* We instantiated a MissingIndicator and fitted it to the train data of our `features` and created a `Helper function` for transforming features.
+
+#### Encoding Categorical Variables
+
+* We created a `helper function` and it takes in the full X dataframe and feature name, makes a one-hot encoder, and returns the encoder as well as the dataframe with that feature transformed into multiple columns of 1s and 0s
+* We used encoder = OneHotEncoder(sparse_output = True) and fit it to the training data. Then called our helper function that encoded the feature and concat it.
+* We used `LabelEncoder` from `scikit-learn` libraries to encode our target variable. Since this is a Multiclassification model, label encoding is suitable for the target variable because it maps each category to a unique integer, which the model can use directly to predict class labels
+
+## Modelling
+
