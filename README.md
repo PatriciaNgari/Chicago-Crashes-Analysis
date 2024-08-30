@@ -32,39 +32,36 @@ This project aims to develop a predictive model to identify the primary contribu
 
 * Let's check the distribution of gender in the involvement of crashes or accidents.
 
-<img src="Images/Distribution_of_Gender.PNG"><br>
+<img src="Images/Distribution_of_Gender.png">
 
 * The datasets had a larger sample of males involved in accidents compared to other gender with a leading percentage of `52.4%` which is more than half of the dataset.
 * The females had a `38.2%` while X a non-binary or gender non-conforming identity had `9.4%`
 
 #### Classification of Injuries by Gender
 
-![Count of Injury Classifications by Sex](Images/Count_of_Injury_Classifications_by_Sex.PNG)
+![Count of Injury Classifications by Sex](Images/Count_of_Injury_Classifications_by_Sex.png)
 
 * This graph shows the imbalance in the classifications with the class `NO_INDICATION_OF_INJURY` getting a large sample and `FATAL` getting the smallest sample.
 * From the graph `MALES` have high occurrences in all the five classes followed by `FEMALES`.
 
 #### Age_groups With the Most Accident Occurrences.
 
-<img src="Images/Count_of_Males_and_Females_in_Each_Age_Group.PNG"><br>
+<img src="Images/Count_of_Males_and_Females_in_Each_Age_Group.png"><br>
 
 * From the above graph, the individuals both `males` and `females` between age `19-30` were the most involved in car crashes.
 * `Males` in this age group had the highest occurrences with over `180000` crashes while over `170000 Females` in the same age_group of `19-30` had a crash.
 
-#### Yearly Crashes
-
-![Percentage of Accidents Per Year](Images/Percentage_of_Accidents_Per_Year.PNG)
-
-* 
-
-#### Monthly Crashes
-
-![Crashes Counts per Each Month](Images/Crashes_Counts_per_Each_Month.PNG)
-
 #### Injury Clasifications
 
-![Percentage of Injury Classifications](Images/Percentage_of_Injury_Classifications.PNG)
+![Percentage of Injury Classifications](Images/Percentage_of_Injury_Classifications.png)
+
+* From the above graph we can see that the column `INJURY_CLASSIFICATION` has most of the records in the category `NO_INDICATION_OF_INJURY`
 
 #### Classification of Physical Condition
 
-![Percentage of Physical Condition Classifications](Images/Percentage_of_Physical_Condition_Classifications.PNG)
+* The `NORMAL` classification had the highest percentage with over 65% which shows that more than 65% crashes people involved were in normal conditions.
+
+![Percentage of Physical Condition Classifications](Images/Percentage_of_Physical_Condition_Classifications.png)
+
+## Models
+
