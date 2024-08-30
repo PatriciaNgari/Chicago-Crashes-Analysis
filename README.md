@@ -106,12 +106,17 @@ This project aims to develop a predictive model to identify the primary contribu
 ####  LogisticRegression
 
 * We introduced a logistic regression model and fit to our training set.
+
                          precision    recall  f1-score   support
 
                    FATAL       0.00      0.00      0.00       125
-   INCAPACITATING_INJURY       0.00      0.00      0.00      2281
-NONINCAPACITATING_INJURY       0.56      0.03      0.05     14064
- NO_INDICATION_OF_INJURY       0.93      1.00      0.96    322297
+
+   INCAPACITATING_INJURY              0.00        0.00        0.00      2281
+ 
+NONINCAPACITATING_INJURY              0.56        0.03        0.05     14064
+
+ NO_INDICATION_OF_INJURY              0.93        1.00        0.96    322297
+ 
     REPORTED_NOT_EVIDENT       0.00      0.00      0.00      9158
 
                 accuracy                           0.93    347925
@@ -121,18 +126,17 @@ NONINCAPACITATING_INJURY       0.56      0.03      0.05     14064
 * The model recorded an accuracy score of 93%. From the classification report, it shows the model performs very well on the majority class "NO_INDICATION_OF_INJURY" but fails to perform adequately on the minority classes like "FATAL," "INCAPACITATING_INJURY," and others. This suggests that the model is heavily biased towards the majority class.
 
 * We trained another LogisticRegression model with `class_weight='balanced'` to cater for the imbalances, `random_state = 42`, `penalty = 'l2'`, `solver='saga'` and `max_iter = 1000`.
+
                           precision    recall  f1-score   support
 
                    FATAL       0.01      0.33      0.01       125
 
 
-   INCAPACITATING_INJURY       0.04      0.09      0.05      2281
+   INCAPACITATING_INJURY             0.04         0.09         0.05      2281
 
+NONINCAPACITATING_INJURY             0.24         0.12         0.16     14064
 
-NONINCAPACITATING_INJURY       0.24      0.12      0.16     14064
-
- NO_INDICATION_OF_INJURY       0.98      0.31      0.47    322297
-
+ NO_INDICATION_OF_INJURY             0.98         0.31         0.47    322297
 
     REPORTED_NOT_EVIDENT       0.03      0.75      0.06      9158
 
@@ -149,9 +153,13 @@ NONINCAPACITATING_INJURY       0.24      0.12      0.16     14064
                          precision    recall  f1-score   support
 
                    FATAL       0.00      0.63      0.00       125
-   INCAPACITATING_INJURY       0.01      0.53      0.01      2281
-NONINCAPACITATING_INJURY       0.20      0.04      0.07     14064
- NO_INDICATION_OF_INJURY       0.97      0.08      0.14    322297
+
+   INCAPACITATING_INJURY           0.01          0.53          0.01      2281
+
+NONINCAPACITATING_INJURY           0.20          0.04          0.07     14064
+
+ NO_INDICATION_OF_INJURY           0.97          0.08          0.14    322297
+
     REPORTED_NOT_EVIDENT       0.00      0.00      0.00      9158
 
                 accuracy                           0.08    347925
