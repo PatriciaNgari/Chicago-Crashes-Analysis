@@ -41,7 +41,7 @@ This project aims to develop a predictive model to identify the primary contribu
 
 ![Count of Injury Classifications by Sex](Images/Count_of_Injury_Classifications_by_Sex.PNG)
 
-* This graph shows the imbalance in the classifications with the class `NO_INDICATION_OF_INJURY` getting a large sample and `FATAL` getting the smallest sample.
+* This graph shows the class `NO_INDICATION_OF_INJURY` has a large group of records and `FATAL` getting the least.
 * From the graph `MALES` have high occurrences in all the five classes followed by `FEMALES`.
 
 #### Age_groups With the Most Accident Occurrences.
@@ -56,10 +56,13 @@ This project aims to develop a predictive model to identify the primary contribu
 ![Percentage of Injury Classifications](Images/Percentage_of_Injury_Classifications.PNG)
 
 * From the above graph we can see that the column `INJURY_CLASSIFICATION` has most of the records in the category `NO_INDICATION_OF_INJURY`
+* Most of the victims of the crashes had no indication of injuries.
+* The crashes were either not severe or the individuals had applied protective measures.
 
 #### Classification of Physical Condition
 
-* The `NORMAL` classification had the highest percentage with over 65% which shows that more than 65% crashes people involved were in normal conditions.
+* The `NORMAL` classification had the highest percentage with over 65% which shows that 65% of people who were involved in a crash were in normal conditions.
+
 
 ![Percentage of Physical Condition Classifications](Images/Percentage_of_Physical_Condition_Classifications.PNG)
 
@@ -87,7 +90,7 @@ This project aims to develop a predictive model to identify the primary contribu
 
 * F (0.977655): This feature, representing the gender category for female, has the highest importance or coefficient. This means that the model considers this feature the most significant when making predictions.
 
-* DEPLOYED_COMBINATION (0.404507): This refers to instances where multiple safety systems, such as both front and side airbags, were deployed together during an accident This feature is the next most important, though significantly less so than "F". It still plays a considerable role in the model's decisions.
+* DEPLOYED_COMBINATION (0.404507): This refers to instances where multiple safety systems, such as both front and side airbags, were deployed together during an accident. This feature is the next most important, though significantly less so than "F". It still plays a considerable role in the model's decisions.
 
 * AGE_missing (0.347520): This indicates that missing age data has a moderate influence on the model's predictions.
 
@@ -166,13 +169,13 @@ NONINCAPACITATING_INJURY           0.20          0.04          0.07     14064
                macro avg       0.24      0.26      0.05    347925
             weighted avg       0.91      0.08      0.14    347925
 
-* After scaling, recall for the minority classes (e.g., "FATAL" and "INCAPACITATING_INJURY") improved significantly. For "FATAL," recall increased from 0.33 to 0.63, and for "INCAPACITATING_INJURY," from 0.09 to 0.53. This suggests that the model is now identifying more instances of these classes. Precision Decrease:
+* After scaling, recall for the minority classes (e.g., "FATAL" and "INCAPACITATING_INJURY") improved significantly. For "FATAL," recall increased from 0.33 to 0.63, and for "INCAPACITATING_INJURY," from 0.09 to 0.53. This suggests that the model is now identifying more instances of these classes.
 
-* Precision for these classes dropped to nearly 0, indicating that while the model is identifying more instances, it is also making many incorrect predictions. This leads to very low precision, which is problematic for these minority classes. Performance on Majority Class:
+* Precision for these classes dropped to nearly 0, indicating that while the model is identifying more instances, it is also making many incorrect predictions. This leads to very low precision, which is problematic for these minority classes.
 
-* For "NO_INDICATION_OF_INJURY," both precision and recall dropped significantly after scaling (precision from 0.98 to 0.97, recall from 0.31 to 0.08). This indicates that the model's ability to correctly predict the majority class has deteriorated. Overall Accuracy:
+* For "NO_INDICATION_OF_INJURY," both precision and recall dropped significantly after scaling (precision from 0.98 to 0.97, recall from 0.31 to 0.08). This indicates that the model's ability to correctly predict the majority class has deteriorated.
 
-* Accuracy dropped drastically from 0.31 before scaling to 0.08 after scaling. This indicates that the model's overall ability to correctly classify instances has decreased significantly. Macro and Weighted Averages:
+* Accuracy dropped drastically from 0.31 before scaling to 0.08 after scaling. This indicates that the model's overall ability to correctly classify instances has decreased significantly.
 
 * The macro average F1-score decreased from 0.15 to 0.05, and the weighted average F1-score dropped from 0.44 to 0.14 after scaling. This suggests that the model's overall performance across all classes worsened after scaling.
 
@@ -186,7 +189,7 @@ NONINCAPACITATING_INJURY           0.20          0.04          0.07     14064
 
 ## Recommendation
 
-* The original `LogisticRegression` model is recommended since it takes intoconsideration the dataset’s imbalance. It provides the best performance in terms of stability and accuracy.
+* The original `LogisticRegression` model is recommended since it takes into consideration the dataset’s imbalance. It provides the best performance in terms of stability and accuracy.
 
 * Given the high importance of the `gender feature`, it would be worthwhile to investigate further why gender plays such a significant role. This could involve examining `gender-specific behaviors`, 1`types of vehicles driven`, or other socio-demographic factors that may contribute to crash causation.
 
